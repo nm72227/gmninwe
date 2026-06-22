@@ -2501,3 +2501,78 @@ button, input, select, textarea {
         z-index: 99999 !important;
     }
 }
+/* ==========================================
+   TOUQAS FOODS — FULL WIDTH MOBILE REPAIR
+   ========================================== */
+
+@media (max-width: 600px) {
+    
+    /* 1. Eliminate the side-scrolling and lock page to device width */
+    html, body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    /* 2. Force sections to stretch across the entire screen */
+    section, 
+    main, 
+    .tracking-container,
+    .wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Make the Tracking Card wider to fill up that blank space */
+    /* Target whatever container background card you used */
+    div:has(> input), 
+    .card, 
+    [class*="container"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. Fix the "Track Order" Button & Input Box Alignment */
+    /* This forces the layout to stack vertically instead of sticking out */
+    .tracking-form-container,
+    form,
+    div:has(> .track-order-btn) {
+        display: flex !important;
+        flex-direction: column !important; 
+        width: 100% !important;
+        gap: 15px !important;
+    }
+
+    input[type="text"], 
+    .search-input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Snap the Track Order button right underneath cleanly */
+    .track-order-btn, 
+    button, 
+    input[type="submit"] {
+        position: static !important;
+        width: 100% !important;
+        margin: 5px 0 0 0 !important;
+        transform: none !important;
+    }
+
+    /* 5. Keep Floating Buttons Inside screen boundaries safely */
+    .whatsapp-btn, [class*="whatsapp"] {
+        right: 16px !important;
+        bottom: 16px !important;
+    }
+
+    .floating-up-btn, .scroll-to-top {
+        left: auto !important;
+        right: 16px !important;
+        bottom: 80px !important; /* Stacked right above WhatsApp */
+    }
+}
