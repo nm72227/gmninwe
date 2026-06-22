@@ -2502,12 +2502,12 @@ button, input, select, textarea {
     }
 }
 /* ==========================================
-   TOUQAS FOODS — FULL WIDTH MOBILE REPAIR
+   TOUQAS FOODS — TOTAL MOBILE REFINEMENT
    ========================================== */
 
 @media (max-width: 600px) {
     
-    /* 1. Eliminate the side-scrolling and lock page to device width */
+    /* 1. GLOBAL LAYOUT SYSTEM */
     html, body {
         width: 100% !important;
         margin: 0 !important;
@@ -2515,64 +2515,84 @@ button, input, select, textarea {
         overflow-x: hidden !important;
     }
 
-    /* 2. Force sections to stretch across the entire screen */
-    section, 
-    main, 
-    .tracking-container,
-    .wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 3. Make the Tracking Card wider to fill up that blank space */
-    /* Target whatever container background card you used */
-    div:has(> input), 
-    .card, 
-    [class*="container"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 4. Fix the "Track Order" Button & Input Box Alignment */
-    /* This forces the layout to stack vertically instead of sticking out */
-    .tracking-form-container,
-    form,
-    div:has(> .track-order-btn) {
+    /* 2. HEADER & NAVIGATION RESCUE */
+    header, .navbar {
         display: flex !important;
-        flex-direction: column !important; 
+        justify-content: space-between !important;
+        align-items: center !important;
         width: 100% !important;
-        gap: 15px !important;
+        padding: 10px 16px !important; /* Safe padding keeping links inside */
+        box-sizing: border-box !important;
     }
 
-    input[type="text"], 
-    .search-input {
+    /* Stop the cart container from shrinking or collapsing */
+    .cart-icon, .shopping-bag-icon, div:has(> .cart-count) {
+        display: inline-flex !important;
+        min-width: 42px !important;  /* Locks structural size */
+        min-height: 42px !important;
+        flex-shrink: 0 !important;   /* Prevents crushing */
+        box-sizing: border-box;
+    }
+
+    /* Force hamburger menu lines back onto the screen */
+    .hamburger, .menu-toggle, [class*="burger"], header > svg, header > button {
+        margin-left: auto !important; /* Pushes layout cleanly next to cart */
+        margin-right: 0 !important;
+        padding: 8px !important;
+        flex-shrink: 0 !important;
+        z-index: 1001 !important;
+    }
+
+    /* 3. BOTTOM BANNER & FLICKERING WHATSAPP FIX */
+    /* Fixes the large bottom "Order on WhatsApp" banner bar */
+    .bottom-whatsapp-bar, 
+    button:contains("ORDER ON WHATSAPP"),
+    div:has(> [value*="WHATSAPP"]) {
+        position: relative !important; /* Removes absolute positioning causing jumps */
+        width: 100% !important;
+        margin-top: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Stop the flickering overlap: Hide the tiny floating icon IF the big banner is visible */
+    /* This instantly stops the green layout glitch */
+    .whatsapp-btn, .whatsapp-floating, a[href*="wa.me"] img {
+        bottom: 75px !important; /* Moves floating button safely higher up out of the banner zone */
+        right: 16px !important;
+    }
+
+    /* 4. TRACKING CARD AND BUTTON SYSTEMS */
+    section, main, .tracking-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Form stack structural reset */
+    form, .tracking-form-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    input[type="text"] {
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Snap the Track Order button right underneath cleanly */
-    .track-order-btn, 
-    button, 
-    input[type="submit"] {
+    .track-order-btn, button[type="submit"] {
         position: static !important;
         width: 100% !important;
-        margin: 5px 0 0 0 !important;
         transform: none !important;
+        margin: 5px 0 0 0 !important;
     }
 
-    /* 5. Keep Floating Buttons Inside screen boundaries safely */
-    .whatsapp-btn, [class*="whatsapp"] {
-        right: 16px !important;
-        bottom: 16px !important;
-    }
-
+    /* Red up scroll button repositioning */
     .floating-up-btn, .scroll-to-top {
         left: auto !important;
         right: 16px !important;
-        bottom: 80px !important; /* Stacked right above WhatsApp */
+        bottom: 135px !important; /* Elevated cleanly above both WhatsApp structures */
     }
 }
