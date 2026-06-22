@@ -52,7 +52,6 @@ html {
 
 body {
    
-    width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
     margin: 0 !important;
@@ -215,6 +214,11 @@ button, input, select, textarea {
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
+
+.btn-whatsapp:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 
 .btn-mini {
     padding: 0.35rem 0.7rem;
