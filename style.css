@@ -2432,3 +2432,72 @@ button, input, select, textarea {
         position: fixed !important;
     }
 }
+/* ==========================================
+   FORCE MOBILE LAYOUT RESET (OVERRIDE)
+   ========================================== */
+
+@media (max-width: 600px) {
+    
+    /* Stop the entire page from stretching sideways and remove the blank space */
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Target the container holding your tracking input and button */
+    /* This forces whatever div wraps them to stack vertically */
+    div:has(> input[value*="TF-2026"]),
+    div:has(> input[placeholder*="Order"]), 
+    .tracking-section form,
+    [class*="track"] {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Force the input box to stay inside the screen */
+    input[type="text"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important;
+    }
+
+    /* Force the TRACK ORDER button to sit underneath cleanly */
+    button, 
+    input[type="submit"],
+    [class*="btn"] {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+        margin: 8px 0 0 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fix the WhatsApp icon and pull it into the screen boundary */
+    a[href*="wa.me"], 
+    a[href*="whatsapp"],
+    [class*="whatsapp"] {
+        position: fixed !important;
+        right: 16px !important;
+        bottom: 16px !important;
+        left: auto !important;
+        z-index: 99999 !important;
+    }
+
+    /* Move the Red Arrow Scroll button up so it stops blocking your text */
+    [class*="scroll"], 
+    [class*="up"],
+    button:has(span:contains("↑")) {
+        position: fixed !important;
+        right: 16px !important;
+        bottom: 80px !important; /* Positions it right above WhatsApp */
+        left: auto !important;
+        z-index: 99999 !important;
+    }
+}
