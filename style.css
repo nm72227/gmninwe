@@ -2376,3 +2376,59 @@ button, input, select, textarea {
     .timeline-step { width: 100%; flex-direction: row; justify-content: flex-start; gap: 1rem; }
     .step-label { text-align: left; }
 }
+/* ==========================================
+   MOBILE FIXES FOR TRACKING & FLOATING BTNS
+   ========================================== */
+
+@media (max-width: 480px) {
+    
+    /* 1. FIX THE TRACK ORDER CONTAINER */
+    /* Assumes your input and button are wrapped together. 
+       This forces them to stack vertically instead of pushing sideways. */
+    .tracking-form-container, 
+    .search-box-wrapper { 
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 15px !important;
+        box-sizing: border-box;
+    }
+
+    /* Force the input to stay inside the card boundaries */
+    .tracking-form-container input,
+    .search-box-wrapper input {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Reset the Track Order button layout so it centers perfectly */
+    .track-order-btn, 
+    button[type="submit"] {
+        position: static !important; /* Removes any absolute positioning breaking the layout */
+        width: 100% !important;       /* Makes it span nicely under the input box */
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        transform: none !important;  /* Clears any negative margins/transforms */
+    }
+
+    /* 2. FIX THE WHATSAPP BUTTON SYSTEM */
+    /* Pushes it safely away from the right edge so it stops spilling out */
+    .whatsapp-btn,
+    .whatsapp-floating {
+        right: 16px !important;     /* Standard mobile safe padding */
+        bottom: 20px !important;    /* Keeps it anchored neatly */
+        position: fixed !important;
+    }
+
+    /* 3. RELOCATE THE SCROLL UP BUTTON (Bonus Fix) */
+    /* Right now it completely blocks your "Preparing" text. Let's stack it directly above WhatsApp. */
+    .floating-up-btn,
+    .scroll-to-top {
+        left: auto !important;      /* Removes it from the left side */
+        right: 16px !important;     /* Aligns perfectly inline with WhatsApp */
+        bottom: 85px !important;    /* Sits cleanly right above the WhatsApp icon */
+        position: fixed !important;
+    }
+}
