@@ -52,6 +52,7 @@ html {
 
 body {
    
+    width: 100%
     max-width: 100% !important;
     overflow-x: hidden !important;
     margin: 0 !important;
