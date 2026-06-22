@@ -1009,5 +1009,86 @@
 
     <!-- Custom JavaScript Module Connection -->
     <script src="script.js"></script>
+<style>
+@media (max-width: 768px) {
+    /* 1. Eliminate the side-scrolling blank space */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Fix Navbar: Keep logo left, cart & hamburger right */
+    header, nav, .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Prevent cart container from shrinking */
+    .cart-icon, [class*="cart"], [class*="bag"] {
+        flex-shrink: 0 !important;
+        transform: none !important;
+    }
+
+    /* Pull hamburger menu back onto the screen */
+    .hamburger, .menu-toggle, [class*="burger"], header button, header svg {
+        position: static !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 3. Fix Track Order Box: Stack input and button vertically */
+    .tracking-form-container, .search-box-wrapper, form {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    input[type="text"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Snap the Track Order button underneath cleanly */
+    .track-order-btn, button[type="submit"], .tracking-container button {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+        margin-top: 5px !important;
+    }
+
+    /* 4. Stop WhatsApp Banner Flickering & Overlapping */
+    .bottom-whatsapp-bar, [class*="whatsapp-bar"] {
+        position: relative !important;
+        width: 100% !important;
+        clear: both !important;
+    }
+
+    /* Push the small floating WhatsApp icon out of the banner's way */
+    .whatsapp-btn, .whatsapp-floating, a[href*="wa.me"] {
+        bottom: 85px !important;
+        right: 16px !important;
+        position: fixed !important;
+    }
+
+    /* Move red up scroll arrow cleanly above everything */
+    .floating-up-btn, .scroll-to-top {
+        left: auto !important;
+        right: 16px !important;
+        bottom: 145px !important;
+        position: fixed !important;
+    }
+}
+</style>
 </body>
 </html>
