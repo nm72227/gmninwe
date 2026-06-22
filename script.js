@@ -665,7 +665,7 @@ function triggerDirectItemWhatsAppFulfillment(itemId) {
     const selectedItem = TOUQAS_MENU_DATABASE.find(p => p.id === itemId);
     if (!selectedItem) return;
     
-    const targetBusinessWhatsAppNumber = "923076220378"; // Core business target destination number configuration
+    const targetBusinessWhatsAppNumber = "923079308372"; // Core business target destination number configuration
     const structuredPrefilledMessageString = `Hello TOUQAS FOODS! 🌟%0A%0AI want to place a quick instant order from your brand landing page website for this masterpiece dish:%0A%0A--- CULINARY ITEM CORNER ---%0A🍔 Dish Name: ${selectedItem.name}%0A🔢 Quantity: 1 unit%0A💰 Price Valuation: PKR ${selectedItem.price}%0A%0A"good food, great living"%0A%0APlease process this item transaction sequence now. Thank you!`;
     
     const generationUrlStringTarget = `https://wa.me/${targetBusinessWhatsAppNumber}?text=${structuredPrefilledMessageString}`;
@@ -703,7 +703,7 @@ function finalizeWholeCartPayloadDistribution(formEvent) {
     });
     
     // OPTION A: ENHANCED WHATSAPP COMMERCIAL MESSAGE FORMATTING
-    const targetWhatsAppEndpointNumber = "923076220378";
+    const targetWhatsAppEndpointNumber = "923079308372";
     const masterFormattedWhatsAppPayloadString = `🔥 *NEW ORDER INCOMING - TOUQAS FOODS* 🔥%0A%0A*Order Transaction Token ID:* \`${uniqueOrderTransactionHash}\`%0A----------------------------------------%0A%0A📦 *SELECTED DISHES LIST MATRIX:*%0A${structuralInvoiceTextLinesBlock}%0A💰 *Gross Financial Invoice Subtotal:* PKR ${baseTotalInvoiceCost}%0A✨ *Loyalty Wallet System Points Earned:* ${calculatedLoyaltyTokensEarned} Pts%0A%0A----------------------------------------%0A👥 *LOGISTICS USER CREDENTIALS SECTION:*%0A👤 *Client Name:* ${enteredName}%0A📞 *Voice Contact:* ${enteredPhone}%0A💬 *WhatsApp Node:* ${enteredWhatsApp}%0A📧 *Secure Email:* ${enteredEmail}%0A📍 *Physical Shipping Address:* ${enteredAddress}, ${selectedCity}%0A🚚 *Fulfillment Class Mode:* ${selectedOrderType}%0A💳 *Selected Payment Node:* ${selectedPaymentChannel}%0A📝 *Kitchen Notes:* _${enteredNotes}_%0A%0A----------------------------------------%0A*Tagline:* _good food, great living_%0A%0A✅ _Please verify this transaction dataset inside the local administrative control hub cluster panel view._`;
     
     // Trigger window open payload streaming
@@ -746,7 +746,7 @@ function finalizeWholeCartPayloadDistribution(formEvent) {
            body: JSON.stringify(emailParametersPayload)
        });
        
-       OPTION D: DIGITAL TRANSACTION ONLINE GATEWAY ACQUIRERS (Easypaisa/JazzCash/Stripe APIs)
+       OPTION D: DIGITAL TRANSACTION ONLINE GATEWAY ACQUIRERS (Easypaisa/JazzCash)
        ------------------------------------------------------------------------
        If (selectedPaymentChannel === "Easypaisa" || selectedPaymentChannel === "JazzCash") {
           // 1. Initialise payload payment tokens redirection via local proxy servers
