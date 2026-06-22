@@ -48,10 +48,6 @@
                 <a href="#membership" class="nav-link">Membership</a>
                 <a href="#reviews" class="nav-link">Reviews</a>
                 <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#story" class="nav-link">Our Story</a>
-                <a href="#upcoming" class="nav-link">Future Projects</a>
-                <a href="#admin-portal" class="nav-link system-badge">Admin System</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
 
@@ -59,8 +55,6 @@
                 <button class="cart-trigger-btn" id="cartTrigger" aria-label="Open Cart">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-count-badge" id="cartCount">0</span>
-                </button>
-                <a href="#menu" class="btn btn-primary nav-cta-btn">Order Now</a>
                 <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle Navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -633,128 +627,6 @@
                                         <td><button class="btn btn-mini btn-action">Update Stage</button></td>
                                     </tr>
                                 </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Panel 3: Inventory Core Control -->
-                    <div class="admin-content-panel" id="dash-inventory">
-                        <h3 class="panel-heading-title">Stock Sourcing & Ingredient Depletion Indices</h3>
-                        <div class="table-responsive-wrapper">
-                            <table class="admin-data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Raw Material SKU</th>
-                                        <th>Current Sourced Weight/Qty</th>
-                                        <th>Primary Category Link</th>
-                                        <th>Safety Reorder Level</th>
-                                        <th>Supplier Sourcing Channel</th>
-                                        <th>Fulfillment Status Flag</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Premium Boneless Chicken Fillet</td>
-                                        <td>142.5 Kilograms</td>
-                                        <td>Signature Momos / Burgers / Broast</td>
-                                        <td>30.0 Kg</td>
-                                        <td>Metro Wholesalers Core Ltd</td>
-                                        <td><span class="stock-status status-good">Sufficient Stock</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Artisanal Shredded Mozzarella Blend</td>
-                                        <td>85.0 Kilograms</td>
-                                        <td>Pizza Line / Cheesy Fries</td>
-                                        <td>20.0 Kg</td>
-                                        <td>Dairy Premium Processing Plant</td>
-                                        <td><span class="stock-status status-good">Sufficient Stock</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Momo Wrapper Special Dough Flour</td>
-                                        <td>12.0 Kilograms</td>
-                                        <td>Signature Momos Production Core</td>
-                                        <td>25.0 Kg</td>
-                                        <td>Fine Milling Mills Industry</td>
-                                        <td><span class="stock-status status-low">LOW STOCK ALERT</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Imported Liquid Broast Injection Marinade</td>
-                                        <td>48.0 Liters</td>
-                                        <td>Injected Broast Deep Line</td>
-                                        <td>10.0 Ltr</td>
-                                        <td>Touqas Central Logistics Hub</td>
-                                        <td><span class="stock-status status-good">Sufficient Stock</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Panel 4: Payment Gateway Node Architecture -->
-                    <div class="admin-content-panel" id="dash-payments">
-                        <h3 class="panel-heading-title">Financial Clearing Integrations API Architecture Matrix</h3>
-                        <div class="architecture-flow-wrapper">
-                            <p class="arch-intro-text"><i class="fa-solid fa-triangle-exclamation text-orange"></i> The following system interface documents the API endpoints, encryption vectors, and webhooks mapped to clear multi-channel merchant balances into Touqas banking channels.</p>
-                            
-                            <div class="api-endpoint-card">
-                                <div class="endpoint-header"><span class="method get">GET</span> <code>https://api.touqasfoods.com/v1/payments/reconciliation</code></div>
-                                <p>Polls status flags from local payment aggregators. Handles digital cash receipts for Easypaisa, JazzCash, and direct HBL ecommerce merchant nodes.</p>
-                            </div>
-                            <div class="api-endpoint-card">
-                                <div class="endpoint-header"><span class="method post">POST</span> <code>https://api.touqasfoods.com/v1/checkout/secure-gateway-token</code></div>
-                                <p>Generates an isolated SHA-256 encrypted checkout token passing order totals, secure callback URLs, and consumer metadata parameters securely to customer-facing payment windows.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Panel 5: Loyalty System Engine -->
-                    <div class="admin-content-panel" id="dash-loyalty">
-                        <h3 class="panel-heading-title">Loyalty Point Ledgers & Account Tiers</h3>
-                        <p class="panel-sub-text">Monitors real-time consumer wallet balances based on our core calculation rule: <strong>Spend PKR 200 = 1 Point Earned (= PKR 10 Cashback Value)</strong>.</p>
-                        
-                        <div class="table-responsive-wrapper">
-                            <table class="admin-data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Customer Profile Link</th>
-                                        <th>Assigned Tier Class</th>
-                                        <th>Accumulated Points Balance</th>
-                                        <th>Total Cash Equivalency Value</th>
-                                        <th>Last System Activity Timestamp</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Arsalan Mehmood (arsalan@example.com)</td>
-                                        <td><span class="tier-lbl label-plat">Platinum Member</span></td>
-                                        <td>420 Points</td>
-                                        <td>PKR 4,200 wallet balance</td>
-                                        <td>June 22, 2026 14:24</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fatima Shah (fatima.s@example.com)</td>
-                                        <td><span class="tier-lbl label-gold">Gold Member</span></td>
-                                        <td>185 Points</td>
-                                        <td>PKR 1,850 wallet balance</td>
-                                        <td>June 22, 2026 11:05</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bilal Siddiqui (bilal99@example.com)</td>
-                                        <td><span class="tier-lbl label-silv">Silver Member</span></td>
-                                        <td>95 Points</td>
-                                        <td>PKR 950 wallet balance (Locked < 100)</td>
-                                        <td>June 21, 2026 21:50</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SHOPPING CART SLIDE DRAWER UI MODAL -->
     <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
     <div class="cart-drawer-sidebar" id="cartDrawerSidebar">
@@ -818,11 +690,11 @@
                         <div class="form-row-two">
                             <div class="form-group">
                                 <label for="custPhone">Primary Voice Contact <span class="req">*</span></label>
-                                <input type="tel" id="custPhone" required placeholder="e.g., 03217654321">
+                                <input type="tel" id="custPhone" required placeholder="e.g., 03079308372">
                             </div>
                             <div class="form-group">
                                 <label for="custWhatsApp">WhatsApp Node Number <span class="req">*</span></label>
-                                <input type="tel" id="custWhatsApp" required placeholder="e.g., 03076220378">
+                                <input type="tel" id="custWhatsApp" required placeholder="e.g., 03079308372">
                             </div>
                         </div>
 
@@ -835,9 +707,7 @@
                             <div class="form-group">
                                 <label for="custCity">City Region <span class="req">*</span></label>
                                 <select id="custCity" required>
-                                    <option value="Lahore">Lahore Central</option>
-                                    <option value="Islamabad">Islamabad Capital</option>
-                                    <option value="Karachi">Karachi Core</option>
+                                    <option value="Narowal">Lahore Central</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -948,7 +818,7 @@
                     <a href="https://facebook.com" target="_blank" aria-label="Facebook Link"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://instagram.com" target="_blank" aria-label="Instagram Link"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://tiktok.com" target="_blank" aria-label="TikTok Link"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://wa.me/923076220378" target="_blank" aria-label="WhatsApp Link"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://wa.me/923079308372" target="_blank" aria-label="WhatsApp Link"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -972,7 +842,7 @@
                 <h4>Corporate Headquarters</h4>
                 <ul class="footer-contact-details">
                     <li><i class="fa-solid fa-location-dot text-orange"></i> <span>Premium Food District Square, Phase 5 DHA, Lahore, Pakistan</span></li>
-                    <li><i class="fa-solid fa-phone text-orange"></i> <span>03076220378 (Hotline System)</span></li>
+                    <li><i class="fa-solid fa-phone text-orange"></i> <span>03079308372 (Hotline System)</span></li>
                     <li><i class="fa-solid fa-envelope text-orange"></i> <span>operations@touqasfoods.com</span></li>
                     <li><i class="fa-solid fa-clock text-orange"></i> <span>Monday - Sunday | 11:00 AM - 02:00 AM PST</span></li>
                 </ul>
